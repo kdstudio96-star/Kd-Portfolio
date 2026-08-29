@@ -258,7 +258,7 @@ html.lenis, html.lenis body { height: auto; }
 
 /* --------------------------------------------------------------- hero */
 .hero {
-  position: relative; z-index: 4; min-height: 100svh;
+  position: relative; z-index: 3; min-height: 100svh;
   max-width: var(--maxw); margin-inline: auto;
   padding: clamp(6.5rem, 13vh, 10rem) var(--pad-x) clamp(2.5rem, 6vh, 4rem);
   display: flex; flex-direction: column; justify-content: center;
@@ -267,7 +267,7 @@ html.lenis, html.lenis body { height: auto; }
 @media (min-width: 981px) { .hero-inner { max-width: 40%; } }
 @media (min-width: 981px) { .hero-inner { transform: translateX(-1.5in); } }
 @media (min-width: 981px) {
-  .hero { min-height: 34rem; height: 34rem; padding-top: 3.5rem; padding-bottom: .8rem; justify-content: flex-start; }
+  .hero { min-height: 40rem; height: auto; padding-top: 3.5rem; padding-bottom: 3.5rem; justify-content: flex-start; }
   .hero-inner { max-width: 43%; transform: translate(-1.5in, -.7in); }
   .hero-title { font-size: clamp(3.2rem, 4.2vw, 4.25rem); line-height: .9; }
   .hero-lead { margin-top: .65rem; font-size: clamp(.82rem, .86vw, .92rem); line-height: 1.3; }
