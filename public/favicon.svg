@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0a0b0d"/>
+  <rect x="6.5" y="6.5" width="51" height="51" rx="10" fill="none" stroke="#1f242c" stroke-width="2"/>
+  <text x="32" y="41" text-anchor="middle" font-family="'Space Grotesk', Segoe UI, sans-serif"
+        font-size="26" font-weight="700" fill="#e8a13c" letter-spacing="1">KS</text>
+</svg>
