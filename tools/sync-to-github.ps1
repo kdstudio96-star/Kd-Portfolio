@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 $Project = Split-Path -Parent $PSScriptRoot
-$GitDir = Join-Path (Split-Path -Parent $Project) 'kd-portfolio-upload-git'
+$GitDir = Join-Path (Split-Path -Parent (Split-Path -Parent $Project)) 'kd-portfolio-upload-git'
 $WorkTree = $Project
 
 Set-Location $Project
