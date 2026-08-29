@@ -607,7 +607,9 @@ html.lenis, html.lenis body { height: auto; }
 @media (max-width: 480px) { .field-row { grid-template-columns: 1fr; } }
 
 /* --------------------------------------------------------------- footer */
-.site-footer { max-width: var(--maxw); margin-inline: auto; padding: clamp(3rem, 7vw, 4.5rem) var(--pad-x) 4rem; border-top: 1px solid var(--line); background: var(--panel); backdrop-filter: blur(4px); }
+.site-footer { width: 100%; max-width: none; min-height: 280px; box-sizing: border-box; margin: 0; padding: clamp(2.6rem, 6vw, 4rem) max(var(--pad-x), 5vw) 2.8rem; border-top: 1px solid var(--line); background: #09070a; backdrop-filter: none; overflow: hidden; }
+.site-footer::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 70% 10%, rgba(255,45,117,.08), transparent 55%); }
+.site-footer > * { position: relative; z-index: 1; max-width: var(--maxw); margin-inline: auto; }
 .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: clamp(1.6rem, 4vw, 3rem); }
 .foot-mark { display: inline-block; font-family: var(--fd); font-weight: 700; font-size: 1.5rem; color: var(--ink); }
 .foot-name { margin-top: .8rem; font-family: var(--fd); font-weight: 600; }
