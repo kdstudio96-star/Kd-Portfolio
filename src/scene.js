@@ -390,11 +390,11 @@ export function initScene(canvas) {
     const left = Math.cos(a) < 0;
     const mesh = new THREE.Mesh(
       modGeo,
-      new THREE.MeshBasicMaterial({ map: makeModuleTexture(m, left), transparent: true, depthWrite: false, toneMapped: false, opacity: 0.94 }),
+      new THREE.MeshBasicMaterial({ map: makeModuleTexture(m, left), transparent: true, depthTest: false, depthWrite: false, toneMapped: false, opacity: 0.94 }),
     );
     const base = new THREE.Vector3(Math.cos(a) * 3.15 - 0.75, Math.sin(a) * 2.8 + 0.35, 1.5);
     mesh.position.copy(base);
-    mesh.renderOrder = 5;
+    mesh.renderOrder = 20;
     world.add(mesh);
     return { mesh, base, phase: i * 1.3, sys: m.system };
   });
