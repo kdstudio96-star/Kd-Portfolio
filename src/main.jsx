@@ -417,7 +417,8 @@ function renderFooter() {
       ]),
       h('ul', { class: 'foot-tags' }, ['Performance Marketing', 'Social Media', 'Content'].map((t) => h('li', { text: t }))),
       h('ul', { class: 'foot-tags' }, ['Paid Media', 'YouTube', 'Growth'].map((t) => h('li', { text: t }))),
-      h('ul', { class: 'foot-links' }, footerLinks),
+      h('ul', { class: 'foot-links' }, footerLinks.slice(0, 4)),
+      h('ul', { class: 'foot-links' }, footerLinks.slice(4)),
     ]),
     h('p', { class: 'foot-copy', text: `© ${new Date().getFullYear()} ${profile.name} · ${profile.role}` }),
   );
