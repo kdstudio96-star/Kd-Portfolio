@@ -258,7 +258,7 @@ html.lenis, html.lenis body { height: auto; }
 
 /* --------------------------------------------------------------- hero */
 .hero {
-  position: relative; z-index: 3; min-height: 100svh;
+  position: relative; z-index: 4; min-height: 100svh;
   max-width: var(--maxw); margin-inline: auto;
   padding: clamp(6.5rem, 13vh, 10rem) var(--pad-x) clamp(2.5rem, 6vh, 4rem);
   display: flex; flex-direction: column; justify-content: center;
