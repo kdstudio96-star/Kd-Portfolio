@@ -521,6 +521,9 @@ html.lenis, html.lenis body { height: auto; }
 .brand-social--linkedin img { filter: drop-shadow(0 0 5px #0a66c2); }
 .brand-social--website img { filter: drop-shadow(0 0 5px #ff7a18); }
 .brand-social:hover img,.brand-social:focus-visible img { transform:scale(1.18); }
+@media (min-width: 981px) {
+  .brand-socials { flex-wrap: nowrap; max-width: none; }
+}
 .brand-social--instagram:hover,.brand-social--instagram:focus-visible { color:#ff4da6; }
 .brand-social--facebook:hover,.brand-social--facebook:focus-visible { color:#39a0ff; }
 .brand-social--tiktok:hover,.brand-social--tiktok:focus-visible { color:#19e6d2; }
