@@ -516,17 +516,17 @@ html.lenis, html.lenis body { height: auto; }
 .brand-social--x:hover,.brand-social--x:focus-visible { color:#fff; }
 
 /* --------------------------------------------------------------- experience */
-.exp-positioning { font-family: var(--fd); font-weight: 500; font-size: clamp(1.05rem, 1rem + .8vw, 1.5rem); color: var(--ink); max-width: 44rem; margin-bottom: clamp(2rem, 5vw, 3rem); border-left: 2px solid var(--maroon-bright); padding-left: 1rem; }
+.exp-positioning { font-family: var(--fd); font-weight: 500; font-size: clamp(1.05rem, 1rem + .8vw, 1.5rem); color: var(--ink); max-width: 44rem; margin: 0 auto clamp(2rem, 5vw, 3rem); border-top: 2px solid var(--maroon-bright); padding: 1rem 0 0; text-align: center; }
 .resp-grid { list-style: none; margin: 0 0 clamp(2.5rem, 6vw, 3.5rem); padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 .resp { border: 1px solid var(--line); border-radius: 999px; padding: .45rem .95rem; font-size: .85rem; color: var(--muted); background: rgba(255,255,255,.03); }
-.timeline { list-style: none; margin: 0; padding: 0; }
-.tl-item { position: relative; padding: 0 0 clamp(2rem, 5vw, 3rem) clamp(1.8rem, 5vw, 2.6rem); border-left: 1px solid var(--line-strong); }
+.timeline { list-style: none; max-width: 900px; margin: 0 auto; padding: 0; }
+.tl-item { position: relative; padding: 2rem 0 clamp(2rem, 5vw, 3rem); border-top: 1px solid var(--line-strong); text-align: center; }
 .tl-item:last-child { border-left-color: transparent; padding-bottom: 0; }
-.tl-marker { position: absolute; left: -.42rem; top: .3rem; width: .8rem; height: .8rem; border-radius: 50%; background: var(--bg); border: 2px solid var(--maroon-bright); }
+.tl-marker { position: absolute; left: 50%; top: -.42rem; transform: translateX(-50%); width: .8rem; height: .8rem; border-radius: 50%; background: var(--bg); border: 2px solid var(--maroon-bright); box-shadow: 0 0 14px rgba(255,45,117,.55); }
 .tl-dates { font-family: var(--fd); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); }
 .tl-role { margin-top: .3rem; font-size: clamp(1.1rem, 1rem + 1vw, 1.45rem); }
 .tl-org { color: var(--pink); font-size: .92rem; margin-top: .15rem; }
-.tl-points { margin: .8rem 0 0; padding-left: 1.1rem; color: var(--muted); font-size: .9rem; display: flex; flex-direction: column; gap: .35rem; }
+.tl-points { list-style-position: inside; margin: .8rem 0 0; padding-left: 0; color: var(--muted); font-size: .9rem; display: flex; flex-direction: column; gap: .35rem; }
 .edu { margin-top: clamp(2.5rem, 6vw, 3.5rem); padding-top: clamp(2rem, 5vw, 3rem); border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .edu-title { font-family: var(--fd); font-size: .78rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--pink); margin-bottom: 1rem; }
 .edu-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .7rem; color: var(--muted); font-size: .9rem; }
