@@ -163,13 +163,21 @@ html.lenis, html.lenis body { height: auto; }
 }
 .nav-item a:hover, .nav-item a.is-active { color: var(--ink); }
 .nav-item a.is-active::after { width: 100%; }
+.nav-item--dropdown > a::before { content: '⌄'; margin-left: .42rem; float: right; color: var(--pink); font-size: .8rem; }
+.nav-dropdown { position: absolute; top: calc(100% + .8rem); left: 50%; transform: translateX(-50%) translateY(-6px); min-width: 13rem; padding: .55rem; display: grid; gap: .15rem; border: 1px solid rgba(255,45,117,.42); border-radius: 14px; background: rgba(10,7,13,.96); box-shadow: 0 18px 45px rgba(0,0,0,.5), 0 0 28px rgba(255,45,117,.16); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .2s var(--ease), transform .2s var(--ease), visibility .2s; z-index: 20; }
+.nav-item--dropdown { position: relative; }
+.nav-item--dropdown:hover .nav-dropdown, .nav-item--dropdown:focus-within .nav-dropdown { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+.nav-dropdown a { display: block; padding: .55rem .7rem; border-radius: 8px; color: var(--muted); font-size: .68rem; letter-spacing: .05em; white-space: nowrap; }
+.nav-dropdown a:hover, .nav-dropdown a:focus-visible { color: #fff; background: rgba(255,45,117,.14); }
 .nav-cta {
   display: inline-flex; align-items: center; gap: .5ch;
   border: 1px solid var(--line-strong); border-radius: 999px; padding: .55rem 1.05rem;
   font-family: var(--fd); font-weight: 600; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
   color: var(--ink); text-decoration: none; transition: border-color .18s var(--ease), color .18s var(--ease), background .18s var(--ease);
 }
-.nav-cta:hover { border-color: var(--pink); color: #fff; background: rgba(255, 45, 117, 0.12); }
+.nav-cta { animation: hirePulse 2.8s ease-in-out infinite; }
+.nav-cta:hover { border-color: var(--pink); color: #fff; background: rgba(255, 45, 117, 0.12); box-shadow: 0 0 14px rgba(255,45,117,.45), 0 0 30px rgba(255,122,24,.18); animation: none; }
+@keyframes hirePulse { 0%,100% { box-shadow: 0 0 0 rgba(255,45,117,0); } 50% { box-shadow: 0 0 12px rgba(255,45,117,.38), 0 0 25px rgba(255,122,24,.13); } }
 
 .nav-cta-arrow { display: grid; place-items: center; width: 1.35rem; height: 1.35rem; border-radius: 50%; background: rgba(255,255,255,.1); font-size: .8rem; }
 .nav-toggle { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; background: rgba(255,255,255,.04); border: 1px solid var(--line-strong); border-radius: 50%; cursor: pointer; position: relative; }

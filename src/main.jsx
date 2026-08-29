@@ -103,7 +103,16 @@ function renderSocialRail() {
 /* ------------------------------------------------------------------ nav */
 function renderNav() {
   const list = document.getElementById('nav-list');
-  navLinks.forEach((l) => list.append(h('li', { class: 'nav-item' }, [h('a', { href: l.href, text: l.label })])));
+  navLinks.forEach((l) => {
+    const children = [h('a', { href: l.href, text: l.label })];
+    if (l.dropdown) {
+      children.push(h('div', { class: 'nav-dropdown' }, brandStrip.brands.map((brand) => {
+        const slug = brand.name.toLowerCase().replaceAll(' ', '-').replaceAll('(', '').replaceAll(')', '').replaceAll('.', '');
+        return h('a', { href: `#brand-${slug}`, text: brand.name });
+      })));
+    }
+    list.append(h('li', { class: `nav-item${l.dropdown ? ' nav-item--dropdown' : ''}` }, children));
+  });
 }
 
 /* --------------------------------------------------------------- hero */
