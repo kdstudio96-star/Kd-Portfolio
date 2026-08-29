@@ -406,6 +406,7 @@ function renderContact() {
 /* --------------------------------------------------------- footer */
 function renderFooter() {
   const foot = document.getElementById('site-footer');
+  const footerLinks = navLinks.map((l) => h('li', {}, [h('a', { href: l.href, text: l.label })])).concat([h('li', {}, [h('a', { href: '#contact', text: 'Contact' })])]);
   foot.append(
     h('div', { class: 'foot-grid' }, [
       h('div', { class: 'foot-brand' }, [
@@ -413,8 +414,9 @@ function renderFooter() {
         h('p', { class: 'foot-name', text: profile.name }),
         h('p', { class: 'foot-role', text: profile.role }),
       ]),
-      h('ul', { class: 'foot-tags' }, ['Performance Marketing', 'Social Media', 'Content', 'Paid Media', 'YouTube', 'Growth'].map((t) => h('li', { text: t }))),
-      h('ul', { class: 'foot-links' }, navLinks.map((l) => h('li', {}, [h('a', { href: l.href, text: l.label })])).concat([h('li', {}, [h('a', { href: '#contact', text: 'Contact' })])])),
+      h('ul', { class: 'foot-tags' }, ['Performance Marketing', 'Social Media', 'Content'].map((t) => h('li', { text: t }))),
+      h('ul', { class: 'foot-tags' }, ['Paid Media', 'YouTube', 'Growth'].map((t) => h('li', { text: t }))),
+      h('ul', { class: 'foot-links' }, footerLinks),
     ]),
     h('p', { class: 'foot-copy', text: `© ${new Date().getFullYear()} ${profile.name} · ${profile.role}` }),
   );
