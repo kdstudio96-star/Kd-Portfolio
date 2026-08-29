@@ -369,6 +369,10 @@ html.lenis, html.lenis body { height: auto; }
 .section--philosophy > .sec-head { max-width: 920px; margin-inline: auto; text-align: center; }
 .section--philosophy .sec-title { align-items: center; }
 .section--philosophy .sec-body { margin-inline: auto; text-align: center; max-width: 760px; }
+.section--paid > .sec-head, .section--eva > .sec-head, .section--experience > .sec-head, .section--case > .sec-head, .section--ecosystem > .sec-head { margin-inline: auto; text-align: center; }
+.section--paid .sec-title, .section--eva .sec-title, .section--experience .sec-title, .section--case .sec-title, .section--ecosystem .sec-title { align-items: center; }
+.section--paid .sec-body, .section--eva .sec-body, .section--experience .sec-body, .section--case .sec-body, .section--ecosystem .sec-body { margin-inline: auto; text-align: center; }
+.section--paid .tag-row, .section--eva .tag-row, .section--experience .resp-grid, .section--case .tag-row, .section--case .lever-row { justify-content: center; }
 .kicker {
   font-family: var(--fd); font-size: .74rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
   color: var(--maroon-bright); margin-bottom: 1rem;
