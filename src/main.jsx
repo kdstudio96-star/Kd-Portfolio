@@ -204,6 +204,7 @@ function renderMetrics() {
 /* ---------------------------------------------------------- brand universe */
 function renderEcosystem() {
   const root = document.getElementById('ecosystem');
+  const logoPath = (key) => key === 'website' ? 'https://cdn.simpleicons.org/googlechrome/ff7a18' : `${import.meta.env.BASE_URL}logos/${key}.${key === 'facebook' ? 'jpg' : 'png'}`;
   root.append(
     head('ecosystem-heading', 'Brand universe', ecosystem.heading, `${ecosystem.centre.name} — ${ecosystem.centre.role}.`),
     h('div', { class: 'brand-grid' },
@@ -217,7 +218,7 @@ function renderEcosystem() {
           h('p', { class: 'brand-work', text: b.work }),
           h('div', { class: 'brand-socials', 'aria-label': `${b.name} social links` }, [
             ...Object.entries({ ...(b.socials || {}), website: b.website }).filter(([, url]) => url).map(([key, url]) =>
-              h('a', { class: `brand-social brand-social--${key}`, href: url, target: '_blank', rel: 'noopener noreferrer', 'aria-label': `${b.name} ${key}` }, [h('img', { src: key === 'website' ? 'https://cdn.simpleicons.org/googlechrome/ff7a18' : key === 'youtube' ? '/logos/youtube.png' : `/logos/${key}.${key === 'facebook' ? 'jpg' : 'png'}`, alt: '' })]),
+              h('a', { class: `brand-social brand-social--${key}`, href: url, target: '_blank', rel: 'noopener noreferrer', 'aria-label': `${b.name} ${key}` }, [h('img', { src: logoPath(key), alt: '' })]),
             ),
           ]),
           b.featured ? h('a', { class: 'brand-link', href: '#case-study', text: 'Read the Gatay Chalo case study →' }) : null,
