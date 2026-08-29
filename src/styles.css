@@ -357,6 +357,7 @@ html.lenis, html.lenis body { height: auto; }
 .section--metrics > * { width: min(var(--maxw), 100%); max-width: var(--maxw); margin-inline: auto; }
 @media (min-width: 901px) { .section--metrics > .metric-grid { transform: translateX(1in); } }
 @media (min-width: 901px) { .section--metrics > .sec-head { transform: translateX(1in); text-align: center; } }
+@media (min-width: 901px) { .section--metrics > .metric-grid, .section--metrics > .sec-head { transform: none; } }
 .section--metrics .sec-title-line { display: inline; }
 .section--metrics .sec-title-line + .sec-title-line::before { content: ' '; }
 .section--ecosystem > *, .section--services > *, .section--experience > *,
