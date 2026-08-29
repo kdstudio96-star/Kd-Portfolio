@@ -322,6 +322,7 @@ function renderServices() {
   const root = document.getElementById('services');
   root.append(
     head('services-heading', 'What I can do for your brand', ['From strategy to execution,', 'I build the system behind growth.']),
+    h('p', { class: 'remote-banner', text: 'REMOTE SERVICES · WORLDWIDE COLLABORATION · FLEXIBLE ENGAGEMENTS' }),
     h('div', { class: 'svc-list' },
       services.map((s) =>
         h('article', { class: `svc sys-${s.system}` }, [

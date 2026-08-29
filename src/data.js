@@ -12,6 +12,7 @@ export const profile = {
   name: 'Kundan Sonji',
   role: 'Digital Growth Strategist',
   secondary: [
+    'Remote Growth Services — Worldwide',
     'Senior Social Media Manager',
     'Performance Marketing',
     'Paid Media',
@@ -26,7 +27,7 @@ export const profile = {
   whatsapp: '923391121169',
   linkedin: 'https://www.linkedin.com/in/kundan-kd-b39158217/',
   positioning:
-    'Strategy. Content. Paid Media. Performance. I build and run multi-brand content systems and paid media that scales across Google, YouTube, Meta, TikTok, X and Snapchat.',
+    'Remote services available worldwide. Strategy. Content. Paid Media. Performance. I build and run multi-brand content systems and paid media that scales across Google, YouTube, Meta, TikTok, X and Snapchat.',
 };
 
 export const hero = {
@@ -293,7 +294,7 @@ export const tools = {
 
 export const contact = {
   heading: ['Ready to', 'build growth?'],
-  body: 'Tell me what you’re trying to grow.',
+  body: 'Remote collaboration available worldwide. Tell me what you’re trying to grow.',
   ctaPrimary: { label: 'Let’s grow together', href: 'mailto:kdstudio96@gmail.com' },
   ctaSecondary: { label: 'View my case studies', href: '#case-study' },
 };
