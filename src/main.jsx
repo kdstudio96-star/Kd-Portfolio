@@ -343,9 +343,13 @@ function renderServices() {
 /* --------------------------------------------------------- tools */
 function renderTools() {
   const root = document.getElementById('tools');
+  const toolIcon = (name) => {
+    const key = name === 'Google Ads' || name === 'Google Analytics' ? 'google' : name.toLowerCase().split(' ')[0];
+    return ['google', 'youtube', 'meta', 'tiktok', 'x', 'snapchat', 'linkedin'].includes(key) ? h('span', { class: 'tool-icon', 'aria-hidden': 'true', html: iconSvg(key) }) : null;
+  };
   root.append(
     head('tools-heading', 'Platform universe', [tools.centre]),
-    h('ul', { class: 'tool-cloud' }, tools.items.map((t) => h('li', { class: 'tool', text: t }))),
+    h('ul', { class: 'tool-cloud' }, tools.items.map((t) => h('li', { class: 'tool' }, [toolIcon(t), h('span', { text: t })]))),
   );
 }
 
