@@ -489,12 +489,12 @@ export function initScene(canvas) {
     if (!narrow) {
       // centre the Kd in the right ~58% of the viewport, clear of the exp panel
       world.position.set(1.75, -0.55, 0);
-      world.scale.setScalar(0.5);
+      world.scale.setScalar(0.68);
       camera.fov = 42;
       baseZ = 9.2;
     } else {
       world.position.set(0, 2.2, 0);
-      world.scale.setScalar(0.5);
+      world.scale.setScalar(0.68);
       camera.fov = 56;
       baseZ = 9.4;
     }
