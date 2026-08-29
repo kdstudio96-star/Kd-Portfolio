@@ -321,7 +321,7 @@ html.lenis, html.lenis body { height: auto; }
 @media (min-width: 1181px) { .exp-panel { right: calc(var(--pad-x) - 2in); } }
 @media (max-width: 1180px) {
   .exp-panel {
-    position: static; width: auto; min-height: 52vh; margin-top: 2.2rem;
+    position: static; width: auto; min-height: calc(52vh + 2.5in); margin-top: calc(2.2rem - 1in);
     display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.4rem; align-items: start;
     align-content: space-between;
   }
@@ -329,7 +329,7 @@ html.lenis, html.lenis body { height: auto; }
   .exp-tagline { grid-column: 1 / -1; padding-top: .8rem; border-top: 1px solid var(--line); }
   .exp-platforms { grid-column: 1 / -1; }
 }
-@media (max-width: 560px) { .exp-panel { min-height: 360px; } }
+@media (max-width: 560px) { .exp-panel { min-height: calc(360px + 2.5in); } }
 
 .hero-scroll {
   margin-top: clamp(2rem, 5vw, 3rem); align-self: flex-start;
