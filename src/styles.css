@@ -267,7 +267,7 @@ html.lenis, html.lenis body { height: auto; }
 @media (min-width: 981px) { .hero-inner { max-width: 40%; } }
 @media (min-width: 981px) { .hero-inner { transform: translateX(-1.5in); } }
 @media (min-width: 981px) {
-  .hero { min-height: calc(100svh - 1rem); padding-top: clamp(5.5rem, 10vh, 7.5rem); padding-bottom: 2.5rem; }
+  .hero { min-height: calc(100svh - 2in); padding-top: clamp(5.5rem, 10vh, 7.5rem); padding-bottom: 2.5rem; }
   .hero-inner { max-width: 43%; }
   .hero-title { font-size: clamp(3.8rem, 5.5vw, 5.4rem); line-height: .92; }
   .hero-lead { margin-top: 1.2rem; font-size: clamp(.92rem, 1vw, 1.05rem); line-height: 1.45; }
