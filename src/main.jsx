@@ -173,6 +173,7 @@ function renderPerfStrip() {
 }
 function renderBrandStrip() {
   const root = document.getElementById('brandstrip');
+  const brandLogo = { 'Vie (Pvt) Ltd.': 'vie', 'Gatay Chalo': 'gatay-chalo', 'Eva Foods': 'eva-foods', 'Livvividly': 'livvividly', 'Dancing Dishes': 'dancing-dishes', 'Bazm-e-Tajalli': 'bazm-e-tajalli', 'Spotlight Spa & Saloon': 'spotlight' };
   root.append(
     h('div', { class: 'brands-showcase-heading' }, [h('span', { text: 'SELECTED PARTNERS' }), h('h2', { text: 'BRANDS I WORKED WITH' })]),
     h('div', { class: 'brand-strip' }, [
@@ -182,7 +183,7 @@ function renderBrandStrip() {
           const match = [ecosystem.centre, ...ecosystem.brands].find((item) => item.name.toLowerCase().startsWith(brandKey));
           const links = match ? { ...(match.socials || {}), website: match.website } : {};
           const item = h('li', { class: 'brand-word' }, [
-            h('a', { class: 'brand-word-name brand-word-logo', href: `#brand-${match?.slug || b.name.toLowerCase().replaceAll(' ', '-')}` , text: b.name }),
+            h('a', { class: 'brand-word-name brand-word-logo', href: `#brand-${match?.slug || b.name.toLowerCase().replaceAll(' ', '-')}` }, [h('img', { src: `${import.meta.env.BASE_URL}brand-logos/${brandLogo[b.name]}.png`, alt: b.name })]),
             match?.website ? h('a', { class: 'brand-word-site', href: match.website, target: '_blank', rel: 'noopener noreferrer', text: new URL(match.website).hostname.replace(/^www\./, '') }) : null,
           ]);
           return index < brandStrip.brands.length - 1

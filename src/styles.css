@@ -455,6 +455,7 @@ html.lenis, html.lenis body { height: auto; }
 .brand-word:hover { color: var(--ink); }
 .brand-word-name { font-family: var(--fd); font-weight: 700; font-size: clamp(1rem,1.5vw,1.35rem); letter-spacing: -.04em; white-space: nowrap; color:#f4edf5; text-shadow:0 0 10px rgba(255,45,117,.32); transform-style:preserve-3d; transition:color .25s var(--ease),text-shadow .25s var(--ease),transform .25s var(--ease); }
 .brand-word-logo { font-size: clamp(1.15rem, 1.8vw, 1.7rem); letter-spacing: -.07em; color: #ff2d75; background: linear-gradient(135deg, #ff174f, #ff477e 48%, #ff9a3d); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-shadow: none; filter: drop-shadow(0 0 9px rgba(255,45,117,.55)); }
+.brand-word-logo img { display: block; width: clamp(5.6rem, 8vw, 8rem); height: 3.4rem; object-fit: contain; mix-blend-mode: screen; filter: drop-shadow(0 0 8px rgba(255,45,117,.62)); }
 .brand-word-sub { font-size: .52rem; letter-spacing: .14em; text-transform: uppercase; color: var(--faint); white-space: nowrap; }
 .brand-word-name { color: inherit; text-decoration: none; cursor: pointer; }
 .brand-word-name { animation:brandFloat 4s ease-in-out infinite; }
