@@ -182,7 +182,7 @@ function renderBrandStrip() {
           const match = [ecosystem.centre, ...ecosystem.brands].find((item) => item.name.toLowerCase().startsWith(brandKey));
           const links = match ? { ...(match.socials || {}), website: match.website } : {};
           const item = h('li', { class: 'brand-word' }, [
-            h('a', { class: 'brand-word-name', href: `#brand-${match?.slug || b.name.toLowerCase().replaceAll(' ', '-')}` , text: b.name }),
+            h('a', { class: 'brand-word-name brand-word-logo', href: `#brand-${match?.slug || b.name.toLowerCase().replaceAll(' ', '-')}` , text: b.name }),
             match?.website ? h('a', { class: 'brand-word-site', href: match.website, target: '_blank', rel: 'noopener noreferrer', text: new URL(match.website).hostname.replace(/^www\./, '') }) : null,
           ]);
           return index < brandStrip.brands.length - 1
