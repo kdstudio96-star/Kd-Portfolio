@@ -265,6 +265,8 @@ html.lenis, html.lenis body { height: auto; }
 }
 .hero-inner { max-width: 43rem; }
 @media (min-width: 981px) { .hero-inner { max-width: 40%; } }
+@media (min-width: 981px) { .hero-inner { transform: translateX(-1.5in); } }
+@media (max-width: 980px) { .hero-inner { transform: translateX(clamp(-1.5in, -14vw, -1rem)); } }
 
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: .55rem;
