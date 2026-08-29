@@ -383,7 +383,7 @@ export function initScene(canvas) {
   });
 
   /* ---- six floating service modules — icon badge + label, full circle ---- */
-  const ANG = { strategy: 2.45, content: 3.14, youtube: 3.9, paid: 1.0, growth: 0.28, reporting: -0.72 };
+  const ANG = { strategy: 2.45, content: 3.14, youtube: 3.9, paid: 1.0, growth: 0.28, reporting: -0.52 };
   const modGeo = new THREE.PlaneGeometry(2.5, 0.82);
   const mods = modules.map((m, i) => {
     const a = ANG[m.key] != null ? ANG[m.key] : (i / modules.length) * Math.PI * 2;
