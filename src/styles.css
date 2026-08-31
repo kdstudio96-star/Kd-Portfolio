@@ -338,8 +338,16 @@ html.lenis, html.lenis body { height: auto; }
   .exp-tagline { grid-column: 1 / -1; padding-top: .8rem; border-top: 1px solid var(--line); }
   .exp-platforms { grid-column: 1 / -1; }
 }
-@media (max-width: 980px) { .exp-panel { min-height: max(520px, calc(100vh - 5rem + 3in)); transform: translateY(-1in); } }
-@media (max-width: 560px) { .exp-panel { min-height: max(520px, calc(100vh - 5rem + 3in)); } }
+@media (max-width: 980px) { .exp-panel { min-height: 0; transform: none; margin-top: 2rem; } }
+@media (max-width: 560px) { .exp-panel { min-height: 0; grid-template-columns: 1fr; margin-top: 1.5rem; } }
+@media (max-width: 980px) {
+  .exp-panel { padding: .9rem 1rem; gap: .7rem; align-content: start; }
+  .exp-value { font-size: 1.55rem; }
+  .exp-label { font-size: .58rem; margin-top: .2rem; }
+  .exp-tagline { padding-top: .55rem; font-size: .66rem; }
+  .exp-platforms { gap: .35rem; }
+  .exp-plat { width: 1.5rem; height: 1.5rem; }
+}
 
 .hero-scroll {
   margin-top: clamp(2rem, 5vw, 3rem); align-self: flex-start;
